@@ -1,0 +1,82 @@
+import { CirclePlus } from 'lucide-react';
+export const UsersModalFormConfig = {
+    moduleTitle: 'Manage Users',
+    title: 'Create Users',
+    description: 'Fill in the details below to create a new user!',
+    addButton: {
+        id: 'add-user',
+        label: 'Add Users',
+        className: 'cursor-pointer rounded-lg bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600',
+        icon: CirclePlus,
+        type: 'button',
+        variant: 'default',
+        permission: "create-user",
+    },
+    fields: [
+        {
+            id: 'user-name',
+            key: 'name',
+            name: 'name',
+            label: 'Users name',
+            type: 'text',
+            placeholder: 'Enter user\'s name',
+            autocomplete: 'name',
+            tabIndex: 1,
+        },
+        {
+            id: 'user-email',
+            key: 'email',
+            name: 'email',
+            label: 'Users email',
+            type: 'text',
+            placeholder: 'Enter user\'s email',
+            autocomplete: 'email',
+            tabIndex: 2,
+        },
+        {
+            id: 'user-password',
+            key: 'password',
+            name: 'password',
+            label: 'Users password',
+            type: 'text',
+            placeholder: 'Enter user\'s password',
+            autocomplete: 'password',
+            tabIndex: 3,
+        },
+        {
+            id: 'confirm-password',
+            key: 'confirm-password',
+            name: 'confirm-password',
+            label: 'Users confirm-password',
+            type: 'text',
+            placeholder: 'Enter user\'s confirm-password',
+            autocomplete: 'confirm-password',
+            tabIndex: 4,
+        },
+        {
+            id: 'roles',
+            key: 'roles',
+            name: 'roles',
+            label: 'User\'s role',
+            type: 'single-select',
+            tabIndex: 5,
+            options: []
+        },
+    ],
+    buttons: [
+        {
+            key: "cancel",
+            type: 'button',
+            label: 'Cancel',
+            variant: 'ghost',
+            className: 'cursor-pointer',
+        },
+        {
+            key: "submit",
+            type: "submit",
+            label: "Save User",
+            variant: "default",
+            className: "cursor-pointer",
+        }
+    ],
+};
